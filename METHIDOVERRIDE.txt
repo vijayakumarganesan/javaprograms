@@ -1,0 +1,26 @@
+package Methods;
+
+public class Alpha {
+	public static void method1(String name1) //1.same method name same argument
+	{
+		System.out.println("the passed name in first created method"+name1);//not print 
+		
+	}
+	
+}
+public class Bheta{
+	public static void method1(String name1)   //2.same method name same argument
+	{
+		System.out.println("the passed name in latest method :"+name1);
+	}
+
+	public static void main(String[] args) {
+		Bheta.method1("vijay");//static method is used to directly access the class without using object.
+	
+	}                          
+
+}
+//This is method overriding concept.
+--------------------------------------------------------------------------------------------------------------
+OUTPUT
+the passed name in latest method :vijay //PRINT SECOND METHOD DOES NOT PRINT FIRST METHOD BECAUSE THE SECOND METHOD OVERRIDE THE FIRST METHOD.

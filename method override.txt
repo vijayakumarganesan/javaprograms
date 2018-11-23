@@ -1,0 +1,27 @@
+package Methods;
+
+public class Alpha {
+	public static void method1(String name1) 
+	{
+		System.out.println("the passed name is"+name1);
+		
+	}
+	
+}
+public class Bheta extends Alpha{
+	public static void method1(String name2)
+	{
+		System.out.println("the passed name is :"+name2);
+	}
+
+	public static void main(String[] args) {
+                                      Alpha.method1("kumar");
+		Bheta.method1("vijay");
+	
+	}
+
+}
+---------------------------------------------------------------------------------------------------------
+output
+the passed name is :vijay   //latest created method is override
+

@@ -1,0 +1,54 @@
+package generics;
+
+
+
+import java.util.*;
+import java.util.ArrayList;
+
+
+
+public class WildcardUpperbound {
+
+	public static void main(String[] args) {
+
+       List<Number> numberlist= new ArrayList<Number>();
+       numberlist.add(3.3);
+       numberlist.add(4.9);
+       numberlist.add(3.4);
+       double sum = sum(numberlist);
+       System.out.println("double sum is"+sum);
+       
+       List<Integer> intlist= new ArrayList<Integer>();
+       intlist.add(3);
+       intlist.add(4);
+       intlist.add(3);
+       sum = sum(intlist);
+       System.out.println(" sum is"+sum);
+       
+	}
+
+
+	private static double sum(List<? extends Number> list) {
+		
+		double sum=0;
+		for(Number n: list)
+		{
+			sum=+n.doubleValue();
+			
+			
+		}
+		
+		return sum;
+	}
+
+}
+------------------------------------------------------------------------------------------------------------
+OUTPUT
+double sum is3.4
+ sum is3.0
+---------------------------------------------------------------------------------------------------
+EXPECTED OUTPUT
+double sum is11.6
+ sum is10
+
+

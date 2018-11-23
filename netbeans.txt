@@ -1,0 +1,27 @@
+try{
+            String qry;
+            qry="SELECT * FROM form vj WHERE uname'"+jTextField1.getText()+"' AND upass'"+jPasswordField1.getText()+"'";         
+            pst=con.prepareStatement(qry);
+            rs=pst.executeQuery();
+            if(rs.next())
+            {
+                menuform mf = new menuform();
+                this.setVisible(false);
+              mf.setVisible(true);
+                 
+            }
+            else
+            {
+             JOptionPane.showMessageDialog(null,"username and password wrong");
+                    jTextField1.setText("");
+                    jPasswordField1.setText("");
+                    }
+            }
+        catch(SQLException e)
+        {
+            
+            JOptionPane.showMessageDialog(null, e);
+        }
+          
+      
+      
